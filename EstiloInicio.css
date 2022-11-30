@@ -1,0 +1,39 @@
+header .logo{
+
+    margin: 10px 0px 10px 47px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    font-size: 1.6em;
+    vertical-align: middle;
+    display: table-cell;
+  
+}
+
+header{
+    background-color: rgba(202, 201, 201, 0.936);
+    width: auto;
+    
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body{
+    
+    background-color: rgb(237, 201, 207);
+
+}
+
+
+.img1{
+
+
+    margin-left: 920px;
+    margin-top: -400px;
+    border-radius: 30px;
+
+
+}

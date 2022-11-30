@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html>
+
+        <head>
+            <meta charset="utf-8">
+            <title>Modelo Difuso para la detección de riesgo de padecimiento de cáncer de mama</title>
+            <link rel="stylesheet" href="EstiloInicio.css" type="text/css">
+            <link rel="shortcut icon" href="Logo2_Difusa.jpg">
+            <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        </head>
+
+
+        <header>
+			<div class="container">
+				<p class="logo"> <span style="color: rgb(249, 7, 87)"> EL CÁNCER DE MAMA </span> EN COLOMBIA </p>
+                             
+				
+				 <br class="logoDos"> <span style="font-family: Courgette";> Detectarlo a tiempo, salva vidas</span></br></p>
+			</div>
+		</header>
+
+
+
+
+<body>
+
+    <div style="margin-left: 50px; margin-top: 60px; padding-right: 750px; ">
+
+        <p style="text-align: justify;"> <span style="color: green"> ¡Bienvenid@!, este es el prototipo de un modelo predictivo del 
+            
+            padecimiento de cáncer de mama, enfocado en la población de la 
+            
+            ciudad d Bogotá. El modelo, utiliza reglas de inferencias lógicas
+            
+            difusas para sus cálculos. Se recomienda, independientemente del resultado,
+            
+            consultar con profesionales médicos.  </span>          
+        </p>
+ 
+     </div>
+ 
+
+    <div style="margin-left: 50px; margin-top: 40px;">
+
+       <form>
+
+        ¿Qué edad tienes?:
+
+        <br />
+
+        <input id="checkbox1" type="checkbox"/> Entre 40 - 47 años
+
+        <br />
+
+        <input id="checkbox2" type="checkbox"/> Entre 48 - 54 años
+
+        <br />
+
+        <input id="checkbox3" type="checkbox"/> Entre 55 - 70 años
+
+        </form>
+
+    </div>
+
+    <br />
+
+    <div style="margin-left: 50px; margin-top: 40px;">
+
+        <form>
+        ¿Tienes familiares de primer grado de consanguinidad que padezcan o hayan padecido algún tipo de cáncer?:
+
+        <br />
+
+        <input id="checkbox4" type="checkbox" value="rbipeliculas"/> Entre 0 - 1 familiar(es)
+
+        <br />
+
+        <input id="checkbox5" type="checkbox" value="rbilibros" /> Entre 2 - 3 familiares
+
+        <br />
+
+        <input id="checkbox6" type="checkbox" value="rbiinternet" /> Entre 4 - 5 familiares
+
+        </form>
+    
+
+    </div>
+
+    <br />
+
+    <div style="margin-left: 50px; margin-top: 40px;">
+
+    <form>
+        <label for="choose">Cononce tu riesgo de padecer cáncer de mama:</label>
+        <input type="button" value="Enviar" onclick="validar()"/>
+
+    </form>
+
+    </div>
+
+    <div class="img1">
+                		
+        <img src="Logo_Difusa.jpg" width=450px height=400px style="border: solid 2px; border-radius: 50px;" >
+
+    </div>
+
+
+
+    <script>
+
+        function validar(){
+
+            var checkbox1 = document.getElementById('checkbox1');
+            var checkbox2 = document.getElementById('checkbox2');
+            var checkbox3 = document.getElementById('checkbox3');
+            var checkbox4 = document.getElementById('checkbox4');
+            var checkbox5 = document.getElementById('checkbox5');
+            var checkbox6 = document.getElementById('checkbox6');
+
+
+            //PRIMERA OPCIÓN
+
+            if(checkbox1.checked && checkbox4.checked ) {
+
+                mostrarMensaje1()
+
+            } 
+
+            if(checkbox1.checked && checkbox5.checked ) {
+
+                mostrarMensaje1()
+
+            } 
+
+            if(checkbox1.checked && checkbox6.checked ) {
+
+                mostrarMensaje2()
+
+            } 
+
+
+            //SEGUNDA OPCIÓN
+
+            if(checkbox2.checked && checkbox4.checked ) {
+
+                mostrarMensaje1()
+
+            } 
+
+            if(checkbox2.checked && checkbox5.checked ) {
+
+                 mostrarMensaje2()
+
+            } 
+
+            if(checkbox2.checked && checkbox6.checked ) {
+
+                mostrarMensaje3()
+
+            } 
+
+
+
+            //TERCERA OPCIÓN
+
+            if(checkbox3.checked && checkbox4.checked ) {
+
+                mostrarMensaje2()
+
+            } 
+
+            if(checkbox3.checked && checkbox5.checked ) {
+
+                mostrarMensaje3()
+
+            } 
+
+            if(checkbox3.checked && checkbox6.checked ) {
+
+                 mostrarMensaje3()
+
+            } 
+
+
+
+            function mostrarMensaje1() {
+                
+                alert("Estás en RIESGO BAJO de padecer cáncer de mama");
+                
+            }
+
+            function mostrarMensaje2() {
+                
+                alert("Estás en RIESGO MEDIO de padecer cáncer de mama. TEN CUIDADO.");
+                
+            }
+
+            function mostrarMensaje3() {
+                
+                alert("Estás en RIESGO ALTO de padecer cáncer de mama");
+                alert("Consulte inmediatamente a su médico y visite las páginas de: https://www.minsalud.gov.co/salud/publica/ssr/Paginas/Cancer-de-mama.aspx para más información.");
+                
+            }
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>
